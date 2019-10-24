@@ -10,7 +10,7 @@ body {
   }
 
 
-
+/*font styles*/
 h1{
     padding-left: 50px;
     padding-right: 50px;
@@ -19,7 +19,14 @@ h1{
     font-family: WorkSans-SemiBold;
     color:  white;
 }
+/*font styles*/
+h2{
+    font-size:20px;
+    font-family: WorkSans-SemiBold;
+    color:  #00273C;
+}
 
+/*font styles*/
 h3{
     padding: 60px;
     font-size:40px;
@@ -28,12 +35,11 @@ h3{
     background-color: #00273C;
 }
 
-h3{
-    padding: 60px;
-    font-size:40px;
-    font-family: WorkSans-SemiBold;
-    color:  white;
-    background-color: #00273C;
+/*font styles*/
+h4{
+    font-size:30px;
+    font-family: WorkSans-Black;
+    color:  #00273C;
 }
 
 .background-color{
@@ -186,7 +192,6 @@ h3{
   overflow: hidden;
   text-align: center;
   padding: 10px;
-  margin-left: 50px;
 
   font-family: WorkSans-regular;
   text-decoration: none;
@@ -450,11 +455,9 @@ footer a {
   max-width: 100%;
   display: flex;
   text-align: left;
-  align-items: left;
   flex-wrap: wrap;
   align-content: stretch;
   background-color: white;
-  font-size: 12px;
   border-radius: 4px;
   font-size:30px;
   font-family: WorkSans-SemiBold;
@@ -479,7 +482,9 @@ footer a {
 
 .flex-container-3 > a {
 
-  margin-right: 50px;
+  margin-right: 5%;
+  margin-left: 20%;
+  margin-top: 5%;
   margin-bottom: 50px;
   text-align: left;
   align-items: left;
@@ -494,7 +499,9 @@ footer a {
 }
 
 .flex-container-3 > div {
-
+  margin-right: 5%;
+  margin-left: 10%;
+  margin-top: 5%;
   text-align: left;
   line-height: 20px;
   font-size: 12px;
@@ -583,12 +590,6 @@ footer a {
   color:  #00273C;
 }
 
-h2{
-    font-size:20px;
-    font-family: WorkSans-SemiBold;
-    color:  #00273C;
-}
-
 
 .shopping-cart {
   width: 70%;
@@ -651,6 +652,7 @@ h2{
   margin-right: 50px;
   float: right;
 }
+
 
 .description {
   font-family: WorkSans-SemiBold;
@@ -727,6 +729,10 @@ button[class*=btn] {
 }
 .plus-btn img {
   margin-top: 2px;
+}
+
+#addToCart {
+  width: 200px;
 }
 
 button:focus,

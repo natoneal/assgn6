@@ -14,10 +14,11 @@
 <!--visible on the website-->
     <body>
 
-        <div class="background-color">
+        <div class="background-image">
             <div class="text">
               <h3>Build Your Order:</h3>
             </div>
+
 
 <!--visible header-->
             <div class="header">
@@ -27,7 +28,7 @@
                         <a href="#contact">Contact</a>
                         <a href="#about">Ingredients</a>
                         <a class="active" href="./browsing page.html">Start Order</a>
-                        <div id="cartNum"></div>
+                        <a id="cartNum"></a>
                         <a href="./cart.html"><img src="./images/cart.svg" alt="Shopping Cart" height="30px" width="30px"></a>
                   </div>
             </div>
@@ -38,53 +39,68 @@
 <!--page details-->
             <div class="flex-container-3">
                 <!--image-->
-                <a href="./product detail page.html">
-                    <a style="text-align: center;">Original</a>
-                    <img class="flex-container-3-image" id="van" src="./images/SVG/vanilla.svg"  alt="original"height="200px" width="200px">
+                <a href="./productDetailPage.html">
+                    <h4 style="text-align: center;">Original</h4>
+                    <img class="flex-container-3-image" id="van" src="./images/SVG/vanilla.svg"  alt="original" height="200px" width="200px">
                 </a>
+
+                <!--selection for glaze--dropdown-->
                 <div>
-                        <!--selection for glaze--dropdown-->
                         <div class="flex-container-3">
                             <section class="bun-type">
                                   <label for="bun">Glaze:</label>
                                   <select name="bun" id="selectTopping" onchange="toppingImage()">
-                                    <option value="select">Select</option>
-                                    <option value="none">None</option>
-                                    <option value="choco">Double-Chocolate</option>
-                                    <option value="nilla">Vanilla-Milk</option>
-                                    <option value="sugar">Sugar-Milk</option>
-                            </select>
+                                        <option value="select">Select</option>
+                                        <option value="none">None</option>
+                                        <option value="choco">Double-Chocolate</option>
+                                        <option value="nilla">Vanilla-Milk</option>
+                                        <option value="sugar">Sugar-Milk</option>
+                                    </select>
+                            </section>
                         </div>
+
                         <!--select amount of buns in the box--dropdown-->
                         <div class="flex-container-3">
                             <section class="bun-type">
                                   <label for="amount">Amount in box:</label>
                                   <select name="bun" id="amount" onchange="cartAmount()">
-                                    <option value="1">1</option>
-                                    <option value="3">3</option>
-                                    <option value="6">6</option>
-                                    <option value="12">12</option>
-                            </select>
-                        <!--price at the bottom-->
-                        <p>Total: $4.99</p>
-
+                                        <option value="1">1</option>
+                                        <option value="3">3</option>
+                                        <option value="6">6</option>
+                                        <option value="12">12</option>
+                                  </select>
+                            </section>
                         </div>
+
+                        <!--price at the bottom-->
+                        <div class="flex-container-3">
+                            <section class="bun-type">
+                                <a>Total: $4.99</a>
+                            </section>
+                        </div>
+
+
 
                         <!--adding to cart and checking out-->
-                        <div>
-                            <button class="button3" id="addtocart" onclick="addToCart()">Add to Cart</button>
-                            <a href="./cart.html" class="button3" >Checkout</a>
+                        <div class="flex-container-3">
+                            <section class="bun-type">
+                                <button class="button3" id="addtocart" onclick="addToCart()">Add to Cart</button>
+                                <a href="./cart.html" class="button3" >Checkout</a>
+                            </section>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>
 
 
 
-            <div class="background-color">
+            <div class="background-image">
                 <div class="text">
-.
+                    .
+                    <div>
+                        .
+                    </div>
                 </div>
             </div>
 
