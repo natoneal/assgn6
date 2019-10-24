@@ -2,6 +2,15 @@
 
 Github link: https://natoneal.github.io/assgn6/
 
+New files added for Assignment 6A:
+  main.js
+  cart.html
+
+Original Files from assignment 5 with updated code:
+  productDetailPage.hmtl (renamed from product browsing page.html)
+  browsingPage.html  (renamed from browsing page.html)
+  index.html
+  stylesheet.css (renamed from exp.css)
 
 Low and High-Fidelity Prototypes: 
 
