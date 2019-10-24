@@ -1,4 +1,4 @@
-/* Style the header with a grey background and some padding */
+/* Style the general body of the webpages */
 body {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -387,6 +387,7 @@ footer a {
 
 
 /*flex container on the productBrosing page*/
+/*
 .flex-container-3 {
   margin-top: 20px;
   width: 100%;
@@ -441,8 +442,76 @@ footer a {
   line-height: 20px;
   font-size: 12px;
 }
+*/
 
 
+.flex-container-3 {
+  margin-top: 20px;
+  max-width: 100%;
+  display: flex;
+  text-align: left;
+  align-items: left;
+  flex-wrap: wrap;
+  align-content: stretch;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  font-size:30px;
+  font-family: WorkSans-SemiBold;
+  color:  #00273C;
+}
+
+.flex-container-3-col {
+  margin-top: 20px;
+  max-width: 100%;
+  display: flex;
+  text-align: left;
+  align-items: left;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+  font-size: 12px;
+  border-radius: 4px;
+  font-size:30px;
+  font-family: WorkSans-SemiBold;
+  color:  #00273C;
+}
+
+.flex-container-3 > a {
+
+  margin-right: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  align-items: left;
+  line-height: 25px;
+  text-decoration: none;
+  padding: 20px 20px;
+  border-radius: 4px;
+  background-color: white;
+  font-size:20px;
+  font-family: WorkSans-SemiBold;
+  color:  #00273C;
+}
+
+.flex-container-3 > div {
+
+  text-align: left;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.flex-container-3-image > div {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  line-height: 50px;
+  background-color: #FBD1A7;
+  text-decoration: none;
+  font-size:20px;
+  font-family: WorkSans-SemiBold;
+  color:  #00273C;
+}
 
 /*flex container on the shopping cart page*/
 .flex-container-4 {
