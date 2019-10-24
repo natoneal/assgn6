@@ -3,12 +3,11 @@ var amount;
 var price;
 
 
-
-
-
 function toppingImage() {
-    if (top === "none") {
+    top = document.getElementById('selectTopping').value;
 
+    if (top === "none") {
+        document.getElementById
     }
 
     if (top === "choco") {
@@ -22,5 +21,10 @@ function toppingImage() {
     if (top === "sugar") {
 
     }
+
+}
+
+
+function priceTotal() {
 
 }
