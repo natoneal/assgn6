@@ -1,6 +1,6 @@
 # assgn6
 
-Github link: https://natoneal.github.io/assgn6/
+Github link: https://natoneal.github.io/assgn6/index.html
 
 New files added for Assignment 6A:
   main.js
