@@ -1,10 +1,11 @@
 # assgn6
 
-Github link: https://natoneal.github.io/assgn6/
+Github link: https://natoneal.github.io/assgn6/index.html
 
 New files added for Assignment 6A:
   main.js
   cart.html
+  Natalie Schade Assignment 6A.pdf
 
 Original Files from assignment 5 with updated code:
   productDetailPage.hmtl (renamed from product browsing page.html)
