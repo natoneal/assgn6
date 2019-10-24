@@ -7,6 +7,7 @@
         <title>Bun Bun Bakery</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
         <link />
+        <script src="main.js"></script>
     </head>
 
     <body>
@@ -23,6 +24,7 @@
                 <a href="#contact">Contact</a>
                 <a href="#about">Ingredients</a>
                 <a class="active" href="./browsing page.html">Start Order</a>
+                <div id="cartNum"></div>
                 <a href="./cart.html"><img src="./images/cart.svg" alt="Shopping Cart" height="30px" width="30px"></a>
               </div>
             </div>
@@ -33,7 +35,7 @@
 
                 <a href="./product detail page.html">
                     <p style="text-align: center;">Original</p>
-                    <img class="flex-container-3-image" src="./images/SVG/vanilla.svg"  alt="original"height="200px" width="200px">
+                    <img class="flex-container-3-image" id="van" src="./images/SVG/vanilla.svg"  alt="original"height="200px" width="200px">
                 </a>
                 <div>
 
@@ -56,7 +58,8 @@
                         <div class="flex-container-3">
                             <section class="bun-type">
                                   <label for="bun">Toppings:</label>
-                                  <select name="bun" id="selectTopping" onchange="toppingImage">
+                                  <select name="bun" id="selectTopping" onchange="toppingImage()">
+                                    <option value="select">Select</option>
                                     <option value="none">None</option>
                                     <option value="choco">Double-Chocolate</option>
                                     <option value="nilla">Vanilla-Milk</option>
@@ -66,15 +69,18 @@
 
                         <div class="flex-container-3">
                             <section class="bun-type">
-                                  <label for="bun">Amount in box:</label>
-                                  <select name="bun" id="bun">
+                                  <label for="amount">Amount in box:</label>
+                                  <select name="bun" id="amount" onchange="cartAmount()">
                                     <option value="1">1</option>
                                     <option value="3">3</option>
                                     <option value="6">6</option>
                                     <option value="12">12</option>
                             </select>
+                        <p>Total: $4.99</p>
+
                         </div>
-                    <a href="./cart.html" class="button3">Add to Cart</a>
+                    <button class="button3" id="addtocart" onclick="addToCart()">Add to Cart</button>
+                    <a href="./cart.html" class="button3" >Checkout</a>
                 </div>
             </div>
         </div>
