@@ -59,9 +59,10 @@ if (amt == 1) {
 
 }
 
+//this continues adding the amount added to cart
 function addToCart() {
 
-cartcount=amount+cartcount;
-document.getElementById("cartNum").innerHTML=cartcount;
+    cartcount=amount+cartcount;
+    document.getElementById("cartNum").innerHTML=cartcount;
 
 }
