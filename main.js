@@ -40,6 +40,12 @@ function cartAmount() {
 
 }
 
+//create new obj. template
+function cartItem(glaze, amount){
+    this.glaze = glaze;
+    this.amount = amount;
+}
+
 //this continues adding the amount added to cart
 function addToCart() {
     cartcount=amount+cartcount;
@@ -59,23 +65,22 @@ function addToCart() {
 
 }
 
-//create new obj. template
-function cartItem(glaze, amount){
-    this.glaze = glaze;
-    this.amount = amount;
-}
-
 function Checkout() {
   var temp = document.getElementsByTagName("template")[0];
   var clon = temp.content.cloneNode(true);
   document.body.appendChild(clon);
 }
 
+html.string = "";
+
 function onload(){
     shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
-
-
+    for (var i=0, i < shoppingCartArray.length; i++) {
+    Things[i]
 }
+}
+
+
 
 
 
