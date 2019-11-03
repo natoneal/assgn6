@@ -15,9 +15,9 @@ function toppingImage() {
         console.log('dfjaldkfjakdfgja')
     }
 //chocolate glaze
-    if (glaze === "choco") {
+    if (glaze === "Double-Chocolate") {
         document.getElementById('van').src="./images/SVG/walnut.svg";
-        console.log('choco')
+        console.log('Double-Chocolate')
     }
 //vanilla glaze
     if (glaze === "nilla") {
@@ -64,80 +64,35 @@ function addToCart() {
     console.log(localStorage.getItem("shoppingCartArray"));
 
 }
-//html String = "";
-// myArr =
-//setting up the template for the shopping cart
-// function Checkout() {
-//   if (localStorage.getItem("shoppingCartArray") !== null) {
-//         console.log(localStorage.getItem("shoppingCartArray"));
-
-//         var shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
-//         var temp, item, glaze, i;
-//           //get the template element:
-//         temp = document.getElementsByTagName("template")[0];
-//           //get the DIV element from the template:
-//         item = temp.content.querySelector("div");
-//           //for each item in the array:
-//         for (i = 0; i < shoppingCartArray.length; i++) {
-//  //           html String += ""
-//    //     }
-//             //Create a new node, based on the template:
-//         //    shoppingCartArray[i].glaze.amount
-//             glaze = document.importNode(item, true);
-//                 //Add data from the array:
-//             glaze.textContent += shoppingCartArray[i];
-//                 //append the new node wherever you like:
-//             document.body.appendChild(glaze);
-//         };
-// }
-// }
-
-
 
 function Checkout() {
-    if (localStorage.getItem("shoppingCartArray") !== null){
-        shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray")); //change back to array
-        console.log(localStorage.getItem("shoppingCartArray"));
-    }
+    console.log("in checkout");
 
-    var temp, glaze, amount, i; //get the template element:
-    temp = document.getElementsByTagName("template")[0];
+    if (localStorage.getItem("shoppingCartArray") != null){
+         shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray")); //change back to array
+     }
 
-    glaze = temp.content.querySelector("div"); //get the DIV element from the template
 
     for (i = 0; i < shoppingCartArray.length; i++) {   //for each item in the array:
-        a = document.importNode(glaze, true); //Create a new node, based on the template:
+        console.log('item ' + i + ' glaze: ' + shoppingCartArray[i].glaze + ', amount: ' + shoppingCartArray[i].amount);
+            var elmnt = document.getElementById("item");
+            var cln = elmnt.cloneNode(true);
+            elmnt.childNodes[5].childNodes[1].innerHTML = shoppingCartArray[i].glaze;
+            elmnt.childNodes[5].childNodes[3].innerHTML = shoppingCartArray[i].amount;
+            console.log("i is: " + i);
+            elmnt.childNodes[1].onclick = function(i){
+                 shoppingCartArray.splice(i, 1);
+                 localStorage.setItem("shoppingCartArray", JSON.stringify(shoppingCartArray));
+                 location.reload();
+             }
+            cln.childNodes[1].onclick = function(x){
+                 shoppingCartArray.splice(x, 1);
+                 console.log('x is: ' + x);
+                 localStorage.setItem("shoppingCartArray", JSON.stringify(shoppingCartArray));
+                 location.reload();
+             }
 
-        a.textContent += shoppingCartArray[i]; //Add data from the array:
-        document.body.appendChild(a);    //append the new node wherever you like:
+            document.getElementById("background-color").appendChild(cln);
+
   }
 }
-
-
-function deleteItem(){
-    var remove = document.getElementById('deleteItem');
-    remove.parentNode.removeChild(remove);
-}
-// function showContent() {
-//   var temp, item, a, i;
-//   //get the template element:
-//   temp = document.getElementsByTagName("template")[0];
-//   //get the DIV element from the template:
-//   item = temp.content.querySelector("div");
-//   //for each item in the array:
-//   for (i = 0; i < myArr.length; i++) {
-//     //Create a new node, based on the template:
-//     a = document.importNode(item, true);
-//     //Add data from the array:
-//     a.textContent += myArr[i];
-//     //append the new node wherever you like:
-//     document.body.appendChild(a);
-//   }
-// }
-//populating the template
-// function onload(){
-//     if (localStorage.getItem("shoppingCartArray") !== null) {
-//         shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
-//         template(glaze, amount)
-//         };
-//     }
