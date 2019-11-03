@@ -92,7 +92,7 @@ function Checkout() {
                  location.reload();
              }
 
-            document.getElementById("background-color").appendChild(cln);
+            document.getElementById("background-image").appendChild(cln);
 
   }
 }
