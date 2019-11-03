@@ -55,7 +55,7 @@ function addToCart() {
     var cartObject = new cartItem(glaze, amount);
 
 //check if local storage is empty in order to the add the cart object
-    if (localStorage.getItem("shoppingCartArray") != null){
+    if (localStorage.getItem("shoppingCartArray") !== null){
         shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray")); //change back to array
     }
 //
@@ -64,23 +64,80 @@ function addToCart() {
     console.log(localStorage.getItem("shoppingCartArray"));
 
 }
+//html String = "";
+// myArr =
+//setting up the template for the shopping cart
+// function Checkout() {
+//   if (localStorage.getItem("shoppingCartArray") !== null) {
+//         console.log(localStorage.getItem("shoppingCartArray"));
+
+//         var shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
+//         var temp, item, glaze, i;
+//           //get the template element:
+//         temp = document.getElementsByTagName("template")[0];
+//           //get the DIV element from the template:
+//         item = temp.content.querySelector("div");
+//           //for each item in the array:
+//         for (i = 0; i < shoppingCartArray.length; i++) {
+//  //           html String += ""
+//    //     }
+//             //Create a new node, based on the template:
+//         //    shoppingCartArray[i].glaze.amount
+//             glaze = document.importNode(item, true);
+//                 //Add data from the array:
+//             glaze.textContent += shoppingCartArray[i];
+//                 //append the new node wherever you like:
+//             document.body.appendChild(glaze);
+//         };
+// }
+// }
+
+
 
 function Checkout() {
-  var temp = document.getElementsByTagName("template")[0];
-  var clon = temp.content.cloneNode(true);
-  document.body.appendChild(clon);
+    if (localStorage.getItem("shoppingCartArray") !== null){
+        shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray")); //change back to array
+        console.log(localStorage.getItem("shoppingCartArray"));
+    }
+
+    var temp, glaze, amount, i; //get the template element:
+    temp = document.getElementsByTagName("template")[0];
+
+    glaze = temp.content.querySelector("div"); //get the DIV element from the template
+
+    for (i = 0; i < shoppingCartArray.length; i++) {   //for each item in the array:
+        a = document.importNode(glaze, true); //Create a new node, based on the template:
+
+        a.textContent += shoppingCartArray[i]; //Add data from the array:
+        document.body.appendChild(a);    //append the new node wherever you like:
+  }
 }
 
-html.string = "";
 
-function onload(){
-    shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
-    for (var i=0, i < shoppingCartArray.length; i++) {
-    Things[i]
+function deleteItem(){
+    var remove = document.getElementById('deleteItem');
+    remove.parentNode.removeChild(remove);
 }
-}
-
-
-
-
-
+// function showContent() {
+//   var temp, item, a, i;
+//   //get the template element:
+//   temp = document.getElementsByTagName("template")[0];
+//   //get the DIV element from the template:
+//   item = temp.content.querySelector("div");
+//   //for each item in the array:
+//   for (i = 0; i < myArr.length; i++) {
+//     //Create a new node, based on the template:
+//     a = document.importNode(item, true);
+//     //Add data from the array:
+//     a.textContent += myArr[i];
+//     //append the new node wherever you like:
+//     document.body.appendChild(a);
+//   }
+// }
+//populating the template
+// function onload(){
+//     if (localStorage.getItem("shoppingCartArray") !== null) {
+//         shoppingCartArray = JSON.parse(localStorage.getItem("shoppingCartArray"));
+//         template(glaze, amount)
+//         };
+//     }

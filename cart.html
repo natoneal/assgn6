@@ -14,7 +14,7 @@
     </head>
 
 
-    <body onload="onload()">
+    <body onload="Checkout()">
 
         <div class="background-image">
 
@@ -30,12 +30,21 @@
                   </div>
             </div>
 
-            <div class="shopping-cart">
-              <!-- Title -->
-              <h3 class="title2">Shopping Bag</h3>
+            <div>
+                <div class="shopping-cart">
+                  <!-- Title -->
+                  <h3 class="title2">Shopping Bag</h3>
 
+                    <div class="item">
+                      <template>
+                          <div class="button6">
+                                <span class="button6" onclick="deleteItem()"></span>
+                          </div>
+                      </template>
+                    </div>
+                </div>
 
-              <div id="cart"></div>
+            </div>
 
               <!-- Product #1 -->
 <!--                   <template class="item">
@@ -194,7 +203,7 @@
 <!--                     <div class="total-price">$3.49</div>
                     <p id="Total"></p>
  -->
-                </div>
+<!--                 </div> -->
 
                     <div>
                         <p id="Total"></p>
@@ -212,7 +221,7 @@
             </div>
         </div>
     </body>
-
+</div>
 
     <footer>
 
