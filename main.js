@@ -1,4 +1,4 @@
-var glaze='none';
+var glaze='None';
 var amount=1;
 var cartcount=0;
 var shoppingCartArray = [];
@@ -10,7 +10,7 @@ function toppingImage() {
         console.log(document.getElementById("selectTopping").value);
         console.log(top);
 //no glaze
-    if (glaze === "none") {
+    if (glaze === "None") {
         document.getElementById('van').src="./images/none.svg";
         console.log('dfjaldkfjakdfgja')
     }
@@ -20,12 +20,12 @@ function toppingImage() {
         console.log('Double-Chocolate')
     }
 //vanilla glaze
-    if (glaze === "nilla") {
+    if (glaze === "Vanilla-Milk") {
         document.getElementById('van').src="./images/SVG/vanilla.svg";
         console.log('nilla')
     }
 //sugar
-    if (glaze === "sugar") {
+    if (glaze === "Sugar-Milk") {
         document.getElementById('van').src="./images/SVG/gluten free.svg";
         console.log('sugar')
     }
